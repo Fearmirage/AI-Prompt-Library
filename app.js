@@ -2,9 +2,16 @@ fetch('prompts.json')
     .then(response => response.json())
     .then(data => {
 
-        //console.log(data);
+        const list = document.getElementById('prompt-list');
+
         data.forEach(prompt => {
-            console.log(prompt.title);
+            const li = document.createElement('li');
+            li.innerHTML = `
+                <b>${prompt.title}</b><br>
+                <i>${prompt.category}</i><br>
+                ${prompt.prompt}
+                `;
+            list.appendChild(li);
         });
 
     })
