@@ -9,7 +9,15 @@
 
         <div class="container">
             <h1>Prompt List</h1>
+             <!-- Form -->
+            <form id="prompt-form">
+                <input type="text" id="title" placeholder="Title" required>
+                <input type="text" id="category" placeholder="Category" required>
+                <textarea id="content" placeholder="Prompt..." required></textarea>
+                <button type="submit">Add Prompt</button>
+            </form>
 
+            <!-- List -->
             <ul id="prompt-list"></ul>
         </div>
 
